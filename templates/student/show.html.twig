@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Student{% endblock %}
+
+{% block body %}
+<section>
+    <h2>Details student</h2>
+    <div>
+        <h4>Nom:{{student.lastname}}</h4>
+        <h4>Prenom:{{student.firstname}}</h4>
+        <h4>Pays:{{student.country}}</h4>
+        <h4>Ville:{{student.city}}</h4>
+        <h4>Adresse:{{student.address}}</h4>
+        <h4>Age:{{ date(student.birthdate).diff(date('now')).y }} Ans</h4>
+
+        <div>
+            <a href="">Modifier</a>
+            <a href="">Supprimer</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

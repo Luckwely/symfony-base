@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Instructor{% endblock %}
+
+{% block body %}
+<section>
+    <h2>Details Instructor</h2>
+    <div>
+        <h4>Nom:{{instructor.lastname}}</h4>
+        <h4>Prenom:{{instructor.firstname}}</h4>
+        <h4>Email:{{instructor.email}}</h4>
+        <h4>Contact:{{instructor.contact}}</h4>
+
+        <div>
+            <a href="{{ path('instructor.edit' , {'id': instructor.id}) }}">Modifier</a>
+            <a href="{{ path('instructor.delete', {'id': instructor.id}) }}">Supprimer</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

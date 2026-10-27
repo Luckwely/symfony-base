@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+<section>
+    <h1>Utilisateurs</h1>
+    <twig:Alert message="Voici une alerte"/>
+    <div>
+        {% for user in users %}
+            <h2>{{ user.name }}</h2>
+            <h2>{{ user.email }}</h2>
+            <div>
+                <h3>Identity</h3>
+                {% set identity = user.identity %}
+                <p>{{ identity.matricule }}</p>
+                <p>{{ identity.createdAt|date() }}</p>
+                <p>{{ identity.country }}</p>
+                <p>{{ identity.city }}</p>
+                <p>{{ identity.address }}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

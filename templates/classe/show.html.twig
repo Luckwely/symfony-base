@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Classe{% endblock %}
+
+{% block body %}
+<section>
+    <h2>Details classe</h2>
+    <div>
+        <h4>Nom: {{classe.name ?? ''}}</h4>
+        <h4>Description: {{classe.description ?? ''}}</h4>
+
+        <div>
+            <a href="{{ path('classe.edit', {'id': classe.id}) }}">Modifier</a>
+            <a href="{{ path('classe.delete', {'id': classe.id}) }}">Supprimer</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -19,6 +19,14 @@
         {% endif %}
     </head>
     <body>
+        <nav>
+            <a href="{{ path('home') }}">Home</a>
+            <a href="{{ path('service') }}">Service</a>
+            <a href="{{ path('article.index') }}">Article</a>
+            <a href="{{ path('student.index') }}">Etudiant</a>
+            <a href="{{ path('instructor.index') }}">Instructor</a>
+            <a href="{{ path('classe.index') }}">Classe</a>
+        </nav>
         {% block body %}{% endblock %}
     </body>
 </html>

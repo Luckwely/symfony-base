@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+<section>
+    <h2>Instructor ({{ instructors|length }})</h2>
+    <a href="{{ path('instructor.create')}}">+New</a>
+    <div>
+        <ul>
+            {% for instructor in instructors %}
+                <li>
+                    <a href="{{ path('instructor.show', {id: instructor.id}) }}">
+                        {{ instructor.firstname }} - {{ instructor.lastname }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

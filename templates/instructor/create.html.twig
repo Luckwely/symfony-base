@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Instructor{% endblock %}
+
+{% block body %}
+<section>
+    <h2>New Instructor</h2>
+    {{ form_start(form) }}
+        <div>
+            {{ form_label(form.firstname) }}
+            {{ form_widget(form.firstname) }}
+            {{ form_errors(form.firstname) }}
+        </div>
+        <div>
+            {{ form_label(form.lastname) }}
+            {{ form_widget(form.lastname) }}
+            {{ form_errors(form.lastname) }}
+        </div>
+        <div>
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email) }}
+            {{ form_errors(form.email) }}
+        </div>
+        <div>
+            {{ form_label(form.contact) }}
+            {{ form_widget(form.contact) }}
+            {{ form_errors(form.contact) }}
+        </div>
+    {{ form_end(form) }}
+</section>
+{% endblock %}

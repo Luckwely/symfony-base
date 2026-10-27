@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Classe!{% endblock %}
+
+{% block body %}
+<section>
+    <h2>Classes ({{ classes|length }})</h2>
+    <a href="{{ path('classe.new') }}">+New</a>
+    <div>
+        <ul>
+            {% for classe in classes %}
+                <li>
+                    <a href="{{ path('classe.show', {id: classe.id}) }}">
+                        {{ classe.name ?? '' }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}
